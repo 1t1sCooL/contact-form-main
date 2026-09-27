@@ -17,7 +17,7 @@
   --grey-500: hsl(186, 15%, 59%);
   --grey-900: hsl(187, 24%, 22%);
   --font: 'Karla', 'Segoe UI', sans-serif;
-  --radius: 8px;
+  --radius: 0.5rem;
 }
 
 *,
@@ -30,7 +30,7 @@
 
 body {
   font-family: var(--font);
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--grey-900);
   -webkit-font-smoothing: antialiased;
 }
@@ -43,74 +43,73 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 /* ============ Card ============ */
 .card {
   width: 100%;
-  max-width: 733px;
+  max-width: 45.8125rem;
   display: flex;
   flex-direction: column;
   background: var(--white);
-  border-radius: 16px;
-  padding: 40px;
+  border-radius: 1rem;
+  padding: 2.5rem;
 }
 
 .card__title {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: -1px;
-  margin-bottom: 27px;
+  letter-spacing: -0.0625rem;
+  margin-block-end: 1.6875rem;
 }
 
 /* ============ Layout helpers ============ */
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .field {
-  margin-bottom: 24px;
+  margin-block-end: 1.5rem;
 }
 
 .field--fieldset {
   border: 0;
-  margin-top: 8px;
+  margin-block-start: 0.5rem;
 }
 
 /* ============ Labels ============ */
 .field__label {
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 8px;
+  margin-block-end: 0.5rem;
 }
 
 .field__req {
   color: var(--green-600);
-  margin-left: 6px;
+  margin-inline-start: 0.375rem;
 }
 
 /* ============ Inputs ============ */
 .input {
   width: 100%;
-  height: 51px;
-  padding: 0 24px;
-  border: 1px solid var(--grey-500);
+  height: 3.1875rem;
+  padding: 0 1.5rem;
+  border: 0.0625rem solid var(--grey-500);
   border-radius: var(--radius);
   font-family: var(--font);
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--grey-900);
   background: var(--white);
   cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .textarea {
-  height: 106px;
-  padding: 12px 24px;
+  height: 6.625rem;
+  padding: 0.75rem 1.5rem;
   line-height: 1.5;
   resize: none;
 }
@@ -122,7 +121,7 @@ body {
 .input:focus {
   outline: none;
   border-color: var(--green-600);
-  box-shadow: 0 0 0 1px var(--green-600);
+  box-shadow: 0 0 0 0.0625rem var(--green-600);
 }
 
 .input--error,
@@ -131,20 +130,19 @@ body {
 }
 
 .input--error:focus {
-  box-shadow: 0 0 0 1px var(--red);
+  box-shadow: 0 0 0 0.0625rem var(--red);
 }
 
 /* ============ Radio options ============ */
 .radio {
   display: flex;
   align-items: center;
-  gap: 12px;
-  height: 51px;
-  padding: 0 24px;
-  border: 1px solid var(--grey-500);
+  gap: 0.75rem;
+  height: 3.1875rem;
+  padding: 0 1.5rem;
+  border: 0.0625rem solid var(--grey-500);
   border-radius: var(--radius);
   cursor: pointer;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .radio:hover {
@@ -165,38 +163,37 @@ body {
 
 .radio__mark {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 50%;
-  border: 2px solid var(--grey-500);
-  transition: border-color 0.2s ease;
+  border: 0.125rem solid var(--grey-500);
 }
 
 .radio--selected .radio__mark {
   border: 0;
-  background: url('/assets/images/icon-radio-selected.svg') center / 20px 20px no-repeat;
+  background: url('/assets/images/icon-radio-selected.svg') center / 1.25rem 1.25rem no-repeat;
 }
 
 .radio__text {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--grey-900);
 }
 
 .radio__input:focus-visible ~ .radio__mark {
-  outline: 2px solid var(--green-600);
-  outline-offset: 2px;
+  outline: 0.125rem solid var(--green-600);
+  outline-offset: 0.125rem;
 }
 
 /* ============ Consent checkbox ============ */
 .field--consent {
-  margin-top: 13px;
-  margin-bottom: 43px;
+  margin-block-start: 0.8125rem;
+  margin-block-end: 2.6875rem;
 }
 
 .consent {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
   cursor: pointer;
 }
 
@@ -209,11 +206,10 @@ body {
 
 .consent__mark {
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--grey-500);
-  border-radius: 2px;
-  transition: border-color 0.2s ease;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 0.125rem solid var(--grey-500);
+  border-radius: 0.125rem;
 }
 
 .consent:hover .consent__mark {
@@ -222,43 +218,42 @@ body {
 
 .consent__input:checked ~ .consent__mark {
   border: 0;
-  background: url('/assets/images/icon-checkbox-check.svg') center / 18px 18px no-repeat;
+  background: url('/assets/images/icon-checkbox-check.svg') center / 1.125rem 1.125rem no-repeat;
 }
 
 .consent__input:focus-visible ~ .consent__mark {
-  outline: 2px solid var(--green-600);
-  outline-offset: 2px;
+  outline: 0.125rem solid var(--green-600);
+  outline-offset: 0.125rem;
 }
 
 .consent__text {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--grey-900);
 }
 
 /* ============ Error text ============ */
 .field__error {
-  margin-top: 8px;
-  font-size: 16px;
+  margin-block-start: 0.5rem;
+  font-size: 1rem;
   color: var(--red);
 }
 
 .field__error--consent {
-  margin-top: 10px;
+  margin-block-start: 0.625rem;
 }
 
 /* ============ Submit ============ */
 .submit {
   width: 100%;
-  height: 59px;
+  height: 3.6875rem;
   border: 0;
   border-radius: var(--radius);
   background: var(--green-600);
   color: var(--white);
   font-family: var(--font);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .submit:hover {
@@ -266,51 +261,50 @@ body {
 }
 
 .submit:focus-visible {
-  outline: 2px solid var(--green-900);
-  outline-offset: 3px;
+  outline: 0.125rem solid var(--green-900);
+  outline-offset: 0.1875rem;
 }
 
 /* ============ Success toast ============ */
 .toast {
   position: fixed;
-  top: 24px;
+  top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  width: min(450px, calc(100% - 32px));
+  width: min(28.125rem, calc(100% - 2rem));
   background: var(--grey-900);
-  border-radius: 12px;
-  padding: 24px;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
   color: var(--white);
   z-index: 10;
-  animation: toast-in 0.3s ease;
 }
 
 @keyframes toast-in {
   from {
     opacity: 0;
-    transform: translate(-50%, -12px);
+    transform: translate(-50%, -0.75rem);
   }
 }
 
 .toast__title {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 18px;
+  gap: 0.75rem;
+  font-size: 1.125rem;
   font-weight: 700;
 }
 
 .toast__text {
-  margin-top: 8px;
-  font-size: 16px;
+  margin-block-start: 0.5rem;
+  font-size: 1rem;
   color: hsl(148, 38%, 91%);
   opacity: 0.85;
 }
 
 /* ============ Attribution ============ */
 .attribution {
-  margin-top: 24px;
-  font-size: 12px;
+  margin-block-start: 1.5rem;
+  font-size: 0.75rem;
   text-align: center;
   color: var(--grey-900);
 }
@@ -319,7 +313,6 @@ body {
   color: var(--green-600);
   font-weight: 700;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 .attribution a:hover {
@@ -327,18 +320,18 @@ body {
 }
 
 /* ============ Mobile (design width 375) ============ */
-@media (max-width: 768px) {
+@media (max-width: 48em) {
   .page {
-    padding: 32px 16px;
+    padding: 2rem 1rem;
     justify-content: flex-start;
   }
 
   .card {
-    padding: 24px;
+    padding: 1.5rem;
   }
 
   .card__title {
-    margin-bottom: 27px;
+    margin-block-end: 1.6875rem;
   }
 
   .row {
@@ -347,14 +340,37 @@ body {
   }
 
   .field--fieldset .row {
-    gap: 16px;
+    gap: 1rem;
   }
 
   .textarea {
-    height: 240px;
+    height: 15rem;
   }
 
   .field--consent {
-    margin-top: 21px;
+    margin-block-start: 1.3125rem;
+  }
+}
+
+/* Motion: opt in to transitions/animation only when the user welcomes it */
+@media (prefers-reduced-motion: no-preference) {
+  .input {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .radio {
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  .radio__mark,
+  .consent__mark {
+    transition: border-color 0.2s ease;
+  }
+  .submit {
+    transition: background-color 0.2s ease;
+  }
+  .toast {
+    animation: toast-in 0.3s ease;
+  }
+  .attribution a {
+    transition: color 0.2s ease;
   }
 }
